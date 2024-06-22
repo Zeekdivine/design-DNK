@@ -1,0 +1,798 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+/* header */
+/* NAVBAR */
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(101, 173, 255);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul li {
+    display: flex;
+    max-width: 50%;
+    height: 35px;
+    margin-top: 10px;
+}
+
+.card {
+    display: flex;
+    margin-top: 15px;
+    gap: 50px;
+}
+
+nav ul li a {
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: white;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin: auto;
+    background-color: rgb(251, 251, 253);
+    transition: 1s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav h1 {
+    display: flex;
+    margin-left: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+nav p {
+    margin-right: 20px;
+    text-align: center;
+}
+
+nav p a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 10px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    transition: 0.45s;
+}
+
+nav p a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin: auto;
+    background-color: rgba(67, 67, 252, 0.877);
+    transition: 1s
+}
+
+nav p a:hover::after {
+    width: 100%;
+
+}
+
+nav p span {
+    margin-left: 10px;
+    color: white;
+    font-size: 11px;
+    font-weight: bolder;
+}
+
+/* first section offers */
+.offers {
+    background-image: linear-gradient(to right, rgba(24, 23, 23, 0.8), rgba(240, 243, 245, 0)), url(../image/IMG_0264.JPG);
+    display: flex;
+    max-width: 100%;
+    background-attachment: fixed;
+    height: 80vh;
+    background-size: cover;
+}
+
+.summer {
+    margin-left: 200px;
+    margin-top: 80px;
+    max-width: 100%;
+    height: 40vh;
+}
+
+.summer h2 {
+    text-transform: capitalize;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+}
+
+.summer :nth-child(2) {
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.925);
+}
+
+.box {
+    display: flex;
+    max-width: 200px;
+    height: 50px;
+    gap: 10px;
+}
+
+.box :nth-child(1) {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.box a button {
+    padding: 9px;
+    margin-top: 5px;
+    border: 1px solid;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(101, 173, 255, 0.3);
+    color: rgba(255, 255, 255, 0.904);
+    border: 1px solid rgba(255, 255, 255, 0.493);
+    cursor: pointer;
+}
+
+#shop {
+    animation-name: slideright;
+    animation-duration: 3s;
+}
+
+@keyframes slideright {
+    0% {
+        transform: translate(350%);
+    }
+}
+
+#more {
+    animation-name: slideleft;
+    animation-duration: 4s;
+}
+
+@keyframes slideleft {
+    50% {
+        transform: translateX(350%);
+    }
+}
+
+
+.box a button:hover {
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.904);
+}
+
+.white :nth-child(1) {
+    background-color: rgba(255, 255, 255, 0.952);
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    color: black;
+    border: none;
+}
+
+.white :nth-child(1):hover {
+    box-shadow: inset 0px 0px 10px hsl(212, 100%, 40%);
+}
+
+/* second section */
+/* logos for second section */
+.logos {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    max-width: 100%;
+    height: 9vh;
+    margin-bottom: 50px;
+
+}
+
+.logos span {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.logos p {
+    margin-top: 20px;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* third section */
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+    justify-content: center;
+}
+
+.image-box {
+    display: inline-block;
+    max-width: 250px;
+    border: 2px solid;
+    height: 55vh;
+    position: relative;
+    text-align: center;
+    line-height: 20px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../image/dera22.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    color: rgba(255, 255, 255, 0.911);
+    scale: .9;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 10px 500px;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.tank {
+    margin-top: 70%;
+
+}
+
+.image-box h2 {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    margin-right: 14px;
+    max-width: 100%;
+
+}
+
+.image-box p {
+    display: inline-block;
+    max-width: 300px;
+    margin-right: 20px;
+
+}
+
+.image-box button {
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 100px;
+    border: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    transition: 0.45s;
+    cursor: pointer;
+}
+
+.image-box button:hover {
+    background-color: rgb(101, 173, 255);
+    color: white;
+}
+
+/* image box 2 */
+.image-box2 {
+    display: inline-block;
+    max-width: 250px;
+    border: 2px solid;
+    height: 55vh;
+    position: relative;
+    text-align: center;
+    line-height: 20px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../image/IMG_0266.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    color: rgba(255, 255, 255, 0.911);
+    scale: .9;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 10px 500px;
+}
+
+.image-box2 h2 {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    margin-right: 14px;
+    max-width: 100%;
+
+}
+
+.image-box2 p {
+    display: inline-block;
+    max-width: 300px;
+    margin-right: 20px;
+
+}
+
+.image-box2 button {
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 100px;
+    border: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    transition: 0.45s;
+    cursor: pointer;
+}
+
+.image-box2 button:hover {
+    background-color: rgb(101, 173, 255);
+    color: white;
+}
+
+.image-box3 {
+    display: inline-block;
+    max-width: 250px;
+    border: 2px solid;
+    height: 55vh;
+    position: relative;
+    text-align: center;
+    line-height: 20px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../image/IMG_0262.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    color: rgba(255, 255, 255, 0.911);
+    scale: .9;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 20px 500px;
+
+
+}
+
+.image-box3 h2 {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    margin-right: 14px;
+    max-width: 100%;
+}
+
+.image-box3 p {
+    display: inline-block;
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+.image-box3 button {
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 100px;
+    border: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    transition: 0.45s;
+    cursor: pointer;
+
+}
+
+.image-box3 button:hover {
+    background-color: rgb(101, 173, 255);
+    color: white;
+}
+
+/* fourth section */
+
+/* overall section */
+.overall {
+    display: block;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 300vh;
+    margin-top: 50px;
+    background-color: rgba(243, 243, 243, 0.849);
+    box-sizing: border-box;
+}
+
+.product-box {
+    display: flex;
+    max-width: 100%;
+    height: 76vh;
+    position: relative;
+    gap: 15px;
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 0%;
+
+}
+
+
+.product-box h4 {
+    position: absolute;
+    top: 0%;
+    left: 42%;
+    font-size: 25px;
+    max-width: 100%;
+    font-family: sans-serif;
+    margin-top: 50px;
+    text-transform: capitalize;
+}
+
+.product-box h4::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: rgb(101, 173, 255);
+    max-width: 50px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.products {
+    display: inline-block;
+    max-width: 50%;
+    height: 50vh;
+    margin-top: 150px;
+
+}
+
+.products img {
+    max-width: 200px;
+
+}
+
+.products p {
+    font-size: small;
+}
+
+.products h5 {
+    font-family: sans-serif;
+    text-transform: capitalize;
+    margin-top: 10px;
+
+}
+
+.products :nth-child(3) {
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(167, 165, 165);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.products :nth-child(4) {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.products p del {
+    color: rgb(165, 164, 164);
+}
+
+.products p i {
+    display: inline;
+    font-size: xx-small;
+}
+
+/* product box two */
+
+.product-box2 {
+    display: flex;
+    max-width: 100%;
+    height: 62vh;
+    position: relative;
+    gap: 15px;
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 0%;
+    margin-top: 50px;
+    animation: box-fade linear forwards;
+    animation-timeline: view();
+    animation-range:entry;
+
+}
+
+.products2 {
+    display: inline-block;
+    max-width: 50%;
+    height: 52vh;
+}
+
+.products2 img {
+    max-width: 200px;
+}
+
+.products2 p {
+    font-size: small;
+}
+
+.products2 h5 {
+    font-family: sans-serif;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+
+.products2 :nth-child(3) {
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(167, 165, 165);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.products2 :nth-child(4) {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.products2 p del {
+    color: rgb(165, 164, 164);
+}
+
+.products2 p i {
+    display: inline;
+    font-size: xx-small;
+}
+
+/* fift section */
+/* special edition */
+.special {
+    display: flex;
+    font-family: sans-serif;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(104, 103, 103, 0)), url(../image/IMG_zeek.JPG);
+    background-size: cover;
+    max-width: 100%;
+    height: 80vh;
+    margin-top: 0px;
+    background-attachment: fixed;
+}
+
+.edition {
+    display: inline-block;
+    margin-top: 100px;
+    margin-left: 200px;
+    line-height: 25px;
+    color: white;
+}
+
+.edition h6 {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+.edition :nth-child(2) {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+.edition :nth-child(3) {
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.edition :nth-child(4) {
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.edition button {
+    padding: 8px 13px;
+    font-size: 11px;
+    border: none;
+    margin-bottom: 50px;
+    background-color: white;
+    transition: 0.45s;
+}
+
+.edition button:hover {
+    box-shadow: inset 0px 0px 10px rgb(2, 118, 250);
+
+}
+
+.edition button a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: black;
+}
+
+/* sixth section */
+/* quality shipping */
+.quality {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 25px;
+    max-width: 80%;
+    margin: auto;
+    justify-content: center;
+}
+
+.shipping {
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 70px;
+}
+
+.shipping :nth-child(1) {
+    margin-bottom: 15px;
+    margin-top: 5px;
+    font-size: 30px;
+}
+
+.shipping :nth-child(2) {
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.shipping :nth-child(3) {
+    max-width: 280px;
+    text-align: center;
+}
+
+/* sevnth section */
+/* seventh section div */
+.sales {
+    margin-left: 150px;
+    text-transform: uppercase;
+    display: inline-block;
+    max-width: 50%;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+
+}
+
+.sales-box {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 100px;
+    max-width: 100%;
+    height: 7vh;
+    background-color: rgba(255, 253, 253, 0.959);
+    box-shadow: 0 0 10px rgba(134, 134, 134, 0.5);
+
+}
+
+/* eigth section */
+
+.subscribe-box {
+    display: flex;
+    max-width: 100%;
+    gap: 50px;
+    justify-content: center;
+    background-color: rgba(241, 240, 240, 0.455);
+    max-height: 60vh;
+
+}
+
+.subscribe {
+    display: inline-block;
+}
+
+.subscribe h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.subscribe p {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.listitems {
+    display: inline-block;
+    line-height: 23px;
+}
+
+.listitems h6 {
+    margin-top: 35px;
+    margin-bottom: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+.listitems ul li {
+    list-style: none;
+    font-size: small;
+    color: rgb(105, 104, 104);
+    text-transform: capitalize;
+}
+
+.input {
+    display: inline-block;
+
+}
+
+.input h4 {
+    margin-top: 35px;
+    font-family: sans-serif;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.input input {
+    padding: 7px;
+    border: 1px solid rgb(148, 147, 147);
+    border-radius: 3px;
+    margin-bottom: 15px;
+    background-color: rgba(236, 234, 234, 0.89);
+}
+
+.input button {
+    padding: 5px 10px;
+    border: none;
+    background-color: rgba(0, 81, 255, 0.89);
+}
+
+.input button a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/*********** footer ************/
+/* last section */
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+
+}
+
+.copyright p {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.copyright p i {
+    margin-right: 10px;
+}
